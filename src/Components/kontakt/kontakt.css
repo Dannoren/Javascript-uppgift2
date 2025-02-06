@@ -1,0 +1,77 @@
+/* Grundläggande styling för Kontakt-sidan */
+.kontakt {
+    background: linear-gradient(135deg, #2ecc71, #27ae60); /* En fin grön gradient */
+    color: white; /* Vit textfärg */
+    font-family: 'Arial', sans-serif; /* Enkel sans-serif font */
+    padding: 50px 20px; /* Lite padding för att ge utrymme */
+    height: 100vh; /* Full höjd av viewporten */
+    display: flex; /* Flexbox för layout */
+    flex-direction: column; /* Staplar innehållet vertikalt */
+    justify-content: center; /* Centrerar innehållet vertikalt */
+    align-items: center; /* Centrerar innehållet horisontellt */
+    text-align: center; /* Centrerar texten */
+    box-sizing: border-box; /* Ser till att padding inte påverkar storleken på elementet */
+  }
+  
+  /* Titelstil */
+  .kontakt h1 {
+    font-size: 3rem; /* Större fontstorlek för titeln */
+    font-weight: 700; /* Fet stil för titeln */
+    margin-bottom: 20px; /* Lite mellanrum under titeln */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Lägger till en liten skugga för bättre läsbarhet */
+  }
+  
+  /* Formulär */
+  .kontakt form {
+    background-color: #fff; /* Vit bakgrund för formuläret */
+    padding: 30px; /* Padding för formuläret */
+    border-radius: 8px; /* Rundade hörn på formuläret */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Liten skugga för att ge djup */
+    width: 100%;
+    max-width: 600px; /* Maximal bredd på formuläret */
+  }
+  
+  /* Input-fält */
+  .kontakt input, .kontakt textarea {
+    width: 100%; /* Full bredd på inputfälten */
+    padding: 12px; /* Lite padding */
+    margin-bottom: 15px; /* Mellanrum mellan fälten */
+    border: 1px solid #ccc; /* Ljus grå kantlinje */
+    border-radius: 6px; /* Rundade hörn på fälten */
+    font-size: 1rem; /* Medelstorlek på texten */
+  }
+  
+  /* Textarea */
+  .kontakt textarea {
+    resize: vertical; /* Tillåter att användaren kan ändra storlek på textarea */
+    min-height: 100px; /* Minimum höjd på textarean */
+  }
+  
+  /* Knapp */
+  .kontakt button {
+    background-color: #e74c3c; /* Rödaktig knappfärg */
+    color: white; /* Vit textfärg */
+    padding: 12px 20px; /* Lite padding runt knappen */
+    font-size: 1.1rem; /* Medelstorlek på texten */
+    font-weight: 600; /* Fetstil på knappen */
+    border: none; /* Tar bort kantlinje */
+    border-radius: 6px; /* Rundade hörn på knappen */
+    cursor: pointer; /* Visar en pekare när musen är över knappen */
+    transition: background-color 0.3s ease; /* Mjuk övergång för hover-effekt */
+  }
+  
+  .kontakt button:hover {
+    background-color: #c0392b; /* Mörkare röd när man hovrar */
+  }
+  
+  /* Kontaktinformation */
+  .kontakt .info {
+    margin-top: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .kontakt .info p {
+    margin-bottom: 10px;
+    font-weight: 500; /* Lite fetare text för kontaktuppgifter */
+  }
+  
