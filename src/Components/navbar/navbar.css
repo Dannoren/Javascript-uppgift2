@@ -1,34 +1,34 @@
-/* Grundläggande styling för navbar */
+
 nav {
-    background-color: #2c3e50; /* Mörk bakgrund */
-    padding: 15px 0; /* Lite padding för att ge utrymme */
+    background-color: #2c3e50;
+    padding: 15px 0;
   }
   
   ul {
-    display: flex; /* Gör att listan blir horisontell */
-    justify-content: center; /* Centrerar länkarna horisontellt */
-    margin: 0; /* Ta bort margin från ul */
-    padding: 0; /* Ta bort padding från ul */
-    list-style-type: none; /* Tar bort punktlistor */
+    display: flex;
+    justify-content: center; 
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none;
   }
   
   li {
-    margin: 0 20px; /* Lägger till mellanrum mellan varje länk */
+    margin: 0 20px; 
   }
   
   a {
-    color: white; /* Vit textfärg */
-    text-decoration: none; /* Tar bort understrykning */
-    font-size: 18px; /* Justera fontstorlek */
-    font-weight: 500; /* Lättare fetstil */
-    transition: color 0.3s; /* Mjuk övergång när färgen ändras */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
   }
   
   a:hover {
-    color: #e74c3c; /* Rödaktig färg när musen hovrar */
+    color: #9e2e21; 
   }
   
   a:focus {
-    outline: none; /* Tar bort fokusramen */
+    outline: none;
   }
   

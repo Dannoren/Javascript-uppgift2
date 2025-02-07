@@ -1,5 +1,5 @@
 import React from "react";
-import './OmMig.css'; // Se till att importera CSS-filen
+import './OmMig.css'; 
 
 const OmMig = () => {
   return (
@@ -12,11 +12,11 @@ const OmMig = () => {
         nya teknologier och arbeta med kreativa projekt. Här är några saker som
         definierar mig:
       </p>
-      <p>
+      <p2>
         - Erfarenhet av React, JavaScript, CSS och HTML <br />
         - Passionerad om att skapa intuitiva användarupplevelser <br />
         - Ständig strävan efter att förbättra mina tekniska färdigheter
-      </p>
+      </p2>
       <button className="btn">Läs mer om mina projekt</button>
 
       {/* Instagram-ikon knapp */}
@@ -26,8 +26,7 @@ const OmMig = () => {
         rel="noopener noreferrer"
         className="instagram-btn"
       >
-      <i className="fa fa-instagram"></i>
-        
+        <i className="fa fa-instagram"></i>
       </a>
     </div>
   );

@@ -1,23 +1,28 @@
-import { createSlice, configureStore } from '@reduxjs/toolkit';
+// src/store/store.js
+import { createStore } from "redux";
 
-// Skapa en slice för projekt
-export const projectSlice = createSlice({
-  name: 'projects',
-  initialState: { projects: [] },  // Initialt tillstånd
-  reducers: {
-    // Reducer för att sätta nya projekt
-    setProjects: (state, action) => {
-      state.projects = action.payload;
-    },
-  },
-});
+// Initialt tillstånd
+const initialState = {
+  theme: 'light' // Standardtema
+};
 
-// Exportera actions som genereras av createSlice
-export const { setProjects } = projectSlice.actions;
+// Reducer för att hantera temaväxling
+const themeReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'TOGGLE_THEME':
+      return {
+        ...state,
+        theme: state.theme === 'light' ? 'dark' : 'light'
+      };
+    default:
+      return state;
+  }
+};
 
-// Konfigurera Redux store
-export const store = configureStore({
-  reducer: {
-    projects: projectSlice.reducer,  // Lägg till reducer för projekt
-  },
+// Skapa Redux store
+export const store = createStore(themeReducer);
+
+// Action creator för temaväxling
+export const toggleTheme = () => ({
+  type: 'TOGGLE_THEME'
 });

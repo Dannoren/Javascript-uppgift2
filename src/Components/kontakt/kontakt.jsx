@@ -1,54 +1,55 @@
-import React, { useState } from "react";
-import './Kontakt.css'; // Se till att importera CSS-filen
+// src/Components/kontakt/kontakt.jsx
+import React, { useState } from 'react';
+import './kontakt.css'; // Lägg till stilen här
 
 const Kontakt = () => {
-  const [namn, setNamn] = useState("");
-  const [email, setEmail] = useState("");
-  const [meddelande, setMeddelande] = useState("");
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
-  const hanteraSkicka = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (namn && email && meddelande) {
-      alert("Tack för ditt meddelande! Jag återkommer så snart som möjligt.");
-      setNamn(""); // Rensa fälten efter skickat meddelande
-      setEmail("");
-      setMeddelande("");
-    } else {
-      alert("Vänligen fyll i alla fält.");
-    }
+    // Skicka formuläret här (t.ex. via en API eller skicka ett e-post)
+    alert('Tack för ditt meddelande!');
+    setFormData({ name: '', email: '', message: '' });
   };
 
   return (
     <div className="kontakt">
-      <h1>Kontakt</h1>
-      
-      {/* Kontaktformulär */}
-      <form onSubmit={hanteraSkicka}>
+      <h1>Kontakta mig</h1>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
           placeholder="Ditt namn"
-          value={namn}
-          onChange={(e) => setNamn(e.target.value)}
         />
         <input
           type="email"
-          placeholder="Din e-postadress"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="Din e-post"
         />
         <textarea
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
           placeholder="Ditt meddelande"
-          value={meddelande}
-          onChange={(e) => setMeddelande(e.target.value)}
         />
-        <button type="submit">Skicka Meddelande</button>
+        <button type="submit">Skicka</button>
       </form>
-
-      {/* Kontaktinformation */}
-      <div className="info">
-        <p><strong>Email:</strong> exempel@exempel.com</p>
-        <p><strong>Telefon:</strong> +46 123 456 789</p>
-      </div>
     </div>
   );
 };

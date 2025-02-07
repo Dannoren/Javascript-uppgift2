@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Projekt.css'; // Se till att importera CSS-filen
+import './Projekt.css'; 
 
 const Projekt = () => {
   const [projekten, setProjekten] = useState([]);
@@ -9,7 +9,7 @@ const Projekt = () => {
     e.preventDefault();
     if (nyttProjekt.trim() !== "") {
       setProjekten([...projekten, nyttProjekt]);
-      setNyttProjekt(""); // Rensa inputfältet efter tillägg
+      setNyttProjekt(""); 
     }
   };
 
@@ -17,7 +17,7 @@ const Projekt = () => {
     <div className="projekt">
       <h1>Mina Projekt</h1>
       
-      {/* Lista med projekt */}
+    
       <ul>
         {projekten.map((projekt, index) => (
           <li key={index}>
@@ -28,7 +28,7 @@ const Projekt = () => {
         ))}
       </ul>
 
-      {/* Formulär för att lägga till nytt projekt */}
+      
       <form onSubmit={hanteraLaggTillProjekt}>
         <input
           type="url"

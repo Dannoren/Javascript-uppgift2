@@ -1,75 +1,105 @@
-/* Grundläggande styling för Projekt-sidan */
+
 .projekt {
-    background: linear-gradient(135deg, #f39c12, #f1c40f); /* En fin gradient bakgrund */
-    color: white; /* Vit textfärg */
-    font-family: 'Arial', sans-serif; /* Enkel sans-serif font */
-    padding: 50px 20px; /* Lite padding för att ge utrymme */
-    display: flex; /* Flexbox för layout */
-    flex-direction: column; /* Staplar innehållet vertikalt */
-    justify-content: flex-start; /* Justerar innehållet till toppen av sidan */
-    align-items: center; /* Centrerar innehållet horisontellt */
-    text-align: center; /* Centrerar texten */
-    box-sizing: border-box; /* Ser till att padding inte påverkar storleken på elementet */
-  }
-  
-  /* Titelstil */
-  .projekt h1 {
-    font-size: 3rem; /* Större fontstorlek för titeln */
-    font-weight: 700; /* Fet stil för titeln */
-    margin-bottom: 30px; /* Lite mellanrum under titeln */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Lägger till en liten skugga för bättre läsbarhet */
-  }
-  
-  /* Lista med projekt */
-  .projekt ul {
-    list-style-type: none; /* Tar bort standard listpunkter */
-    padding: 0;
-  }
-  
-  .projekt li {
-    font-size: 1.2rem; /* Medium fontstorlek för projektnamnen */
-    margin-bottom: 15px; /* Mellanrum mellan varje projekt */
-  }
-  
-  .projekt a {
-    color: #ecf0f1; /* Ljus textfärg för länken */
-    text-decoration: none; /* Tar bort understrykning */
-    font-weight: bold; /* Fetstil för länken */
-    transition: color 0.3s ease; /* Mjuk övergång för hover-effekt */
-  }
-  
-  .projekt a:hover {
-    color: #e74c3c; /* Rödaktig färg när man hovrar */
-  }
-  
-  /* Formulär för att lägga till projekt */
-  .projekt form {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .projekt input, .projekt button {
-    padding: 12px 20px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: none;
-    width: 300px;
-  }
-  
-  .projekt input {
-    margin-bottom: 10px;
-  }
-  
-  .projekt button {
-    background-color: #e74c3c; /* Röd knappfärg */
-    color: white;
-    cursor: pointer;
-  }
-  
-  .projekt button:hover {
-    background-color: #c0392b; /* Mörkare röd när man hovrar */
-  }
-  
+  background-color: #ffffff; 
+  color: #333333;
+  font-family: 'Arial', sans-serif; 
+  margin: 20px; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  text-align: center; 
+  box-sizing: border-box; 
+  min-height: 100vh; 
+}
+
+
+.dark .projekt {
+  background-color: #2c3e50; 
+  color: #ffffff; 
+}
+
+/* Titelstil */
+.projekt h1 {
+  font-size: 3rem; 
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333333;
+}
+
+
+.dark .projekt h1 {
+  color: #ffffff;
+}
+
+
+.projekt ul {
+  list-style-type: none; 
+  padding: 0;
+}
+
+.projekt li {
+  font-size: 1.2rem; 
+  margin-bottom: 15px; 
+}
+
+/* Länkstil */
+.projekt a {
+  color: #007bff;
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: color 0.3s ease;
+}
+
+.projekt a:hover {
+  color: #0056b3;
+}
+
+/* För knappar */
+.projekt button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.projekt button:hover {
+  background-color: #9e2e21;
+}
+
+
+.projekt form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projekt input {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.projekt input:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+
+.dark .projekt button {
+  background-color: #e74c3c;
+}
+
+.dark .projekt button:hover {
+  background-color: #9e2e21;
+}

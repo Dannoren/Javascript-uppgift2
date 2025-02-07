@@ -1,51 +1,61 @@
-/* Grundläggande styling för Home-sidan */
+/* home.css */
+
+/* Stilar för båda teman */
 .home {
-    background: linear-gradient(135deg, #8e44ad, #3498db); /* En fin gradient bakgrund */
-    color: white; /* Vit textfärg */
-    font-family: 'Arial', sans-serif; /* Enkel sans-serif font */
-    height: 100vh; /* Full höjd av viewporten */
-    display: flex; /* Flexbox för layout */
-    flex-direction: column; /* Staplar innehållet vertikalt */
-    justify-content: flex-start; /* Justerar innehållet till toppen av sidan */
-    align-items: center; /* Centrerar innehållet horisontellt */
-    text-align: center; /* Centrerar texten */
-    padding: 20px; /* Lite padding */
-    box-sizing: border-box; /* Ser till att padding inte påverkar storleken på elementet */
-  }
-  
-  /* Titelstil */
-  .home h1 {
-    font-size: 3rem; /* Större fontstorlek för titeln */
-    font-weight: 700; /* Fet stil för titeln */
-    margin-top: 0; /* Tar bort eventuellt mellanrum upptill */
-    margin-bottom: 20px; /* Lite mellanrum under titeln */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Lägger till en liten skugga för bättre läsbarhet */
-  }
-  
-  /* Beskrivningstext */
-  .home p {
-    font-size: 1.2rem; /* Medium fontstorlek för texten */
-    max-width: 600px; /* Maximal bredd på texten */
-    line-height: 1.6; /* Mer radavstånd för bättre läsbarhet */
-    margin: 0 auto; /* Centrerar texten */
-    opacity: 0.9; /* Liten transparens för en finare look */
-  }
-  
-  /* Knappar */
-  .home .btn {
-    background-color: #e74c3c; /* Rödaktig knappfärg */
-    color: white; /* Vit textfärg på knappen */
-    padding: 15px 30px; /* Lite padding runt knappen */
-    font-size: 1.1rem; /* Medelstorlek på texten */
-    font-weight: 600; /* Fetstil på knappen */
-    border: none; /* Tar bort kantlinje */
-    border-radius: 25px; /* Rundade kanter på knappen */
-    cursor: pointer; /* Visar en pekare när musen är över knappen */
-    transition: background-color 0.3s ease; /* Mjuk övergång för hover-effekt */
-    margin-top: 20px; /* Mellanrum ovanför knappen */
-  }
-  
-  .home .btn:hover {
-    background-color: #c0392b; /* Mörkare röd när man hovrar */
-  }
-  
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Titelstil */
+.home h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Beskrivningstext */
+.home p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Knappar */
+.home .btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.home .btn:hover {
+  background-color: #9e2e21;
+}
+/* För ljus tema */
+.home.light {
+  background: #ffffff; /* Ljus bakgrund */
+  color: #2c3e50; /* Mörk textfärg */
+}
+
+/* För mörkt tema */
+.home.dark {
+  background: #34495e; /* Mörk bakgrund */
+  color: #ecf0f1; /* Ljus textfärg */
+}

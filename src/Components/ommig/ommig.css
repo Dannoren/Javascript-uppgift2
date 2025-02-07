@@ -1,77 +1,83 @@
-/* Grundläggande styling för Om Mig-sidan */
-.ommig {
-    background: linear-gradient(135deg, #3498db, #9b59b6); /* En fin gradient bakgrund */
-    color: white; /* Vit textfärg */
-    font-family: 'Arial', sans-serif; /* Enkel sans-serif font */
-    padding: 50px 20px; /* Lite padding för att ge utrymme */
-    height: 100vh; /* Full höjd av viewporten */
-    display: flex; /* Flexbox för layout */
-    flex-direction: column; /* Staplar innehållet vertikalt */
-    justify-content: flex-start; /* Justerar innehållet till toppen av sidan */
-    align-items: center; /* Centrerar innehållet horisontellt */
-    text-align: center; /* Centrerar texten */
-    box-sizing: border-box; /* Ser till att padding inte påverkar storleken på elementet */
-  }
-  
-  /* Titelstil */
-  .ommig h1 {
-    font-size: 3rem; /* Större fontstorlek för titeln */
-    font-weight: 700; /* Fet stil för titeln */
-    margin-bottom: 20px; /* Lite mellanrum under titeln */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Lägger till en liten skugga för bättre läsbarhet */
-  }
-  
-  /* Beskrivningstext */
-  .ommig p {
-    font-size: 1.2rem; /* Medium fontstorlek för texten */
-    max-width: 800px; /* Maximal bredd på texten */
-    line-height: 1.6; /* Mer radavstånd för bättre läsbarhet */
-    margin: 0 auto; /* Centrerar texten */
-    opacity: 0.9; /* Liten transparens för en finare look */
-    margin-bottom: 40px; /* Lite mellanrum innan nästa innehåll */
-  }
-  
-  /* Bilden av personen */
-  .ommig img {
-    border-radius: 50%; /* Rundar bilden för en mjukare look */
-    width: 150px; /* Bestämmer storleken på bilden */
-    height: 150px; /* Håller bilden i en cirkel */
-    object-fit: cover; /* Ser till att bilden inte förvrängs */
-    margin-bottom: 20px; /* Lite mellanrum under bilden */
-  }
-  
-  /* Knappar */
-  .ommig .btn {
-    background-color: #e74c3c; /* Rödaktig knappfärg */
-    color: white; /* Vit textfärg på knappen */
-    padding: 15px 30px; /* Lite padding runt knappen */
-    font-size: 1.1rem; /* Medelstorlek på texten */
-    font-weight: 600; /* Fetstil på knappen */
-    border: none; /* Tar bort kantlinje */
-    border-radius: 25px; /* Rundade kanter på knappen */
-    cursor: pointer; /* Visar en pekare när musen är över knappen */
-    transition: background-color 0.3s ease; /* Mjuk övergång för hover-effekt */
-  }
-  
-  .ommig .btn:hover {
-    background-color: #c0392b; /* Mörkare röd när man hovrar */
-  }
-  
+/* För knappar - Standard ljus tema */
+.ommig .btn {
+  background-color: #e74c3c; 
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.1rem; 
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
 
-/* Instagram-knapp */
-.ommig .instagram-btn {
-    background-color: transparent; /* Ingen bakgrundsfärg */
-    color: #E1306C; /* Instagram rödrosa färg för ikonen */
-    border: none; /* Ingen kantlinje */
-    font-size: 3rem; /* Större ikonstorlek */
-    cursor: pointer; /* Visar pekare när musen är över */
-    transition: color 0.3s ease; /* Mjuk övergång för hover-effekt */
-  }
-  
-  .ommig .instagram-btn:hover {
-    color: #C13584; /* Mörkare rödrosa vid hover */
-  }
-  
-  .ommig .instagram-btn i {
-    margin: 0; /* Ingen extra marginal */
-  }
+/* För knappar - Mörkt tema */
+body.dark .ommig .btn {
+  background-color : #e74c3c;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+
+.ommig .btn:hover {
+  background-color: #9e2e21;
+}
+
+/* För Instagram-ikon - Standard ljus tema */
+.instagram-btn {
+  color: #007bff;
+  font-size: 2rem;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+
+body.dark .instagram-btn {
+  color: #ccc;
+}
+
+
+.instagram-btn:hover {
+  color: #0056b3;
+}
+
+.ommig {
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.ommig h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.ommig p {
+  padding: 20px;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.ommig p2 {
+  padding: 40px;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0 auto;
+  opacity: 0.9;
+}
